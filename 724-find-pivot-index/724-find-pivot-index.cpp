@@ -16,8 +16,7 @@ public:
             if(l_sum==r_sum)
                 return i;
         }
-        if(l_sum==0)
-            return nums.size()-1;
+        
         
         return -1;
         
