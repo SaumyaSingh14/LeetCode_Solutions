@@ -1,17 +1,16 @@
 class Solution {
 public:
     int specialArray(vector<int>& nums) {
-       
-        for(int i=1;i<1001;i++){
-             int count=0;
-        for(int j:nums){
-          
-            if(j>=i)
-                count++;
-            
+        vector<int>array(1001);
+        for(int i: nums){
+            array[i]++;
         }
-            if(i==count)
-                return i;
+        int total=nums.size();
+        for(int j=0;j<1001;j++){
+             if(j==total)
+                 return j;
+            total-=array[j];
+         
             
     }
         return -1;
